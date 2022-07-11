@@ -615,6 +615,7 @@ function Update-ChocolateyPackage {
 
     if ($Module.Verbosity -gt 1) {
         $Module.Result.stdout = $result.stdout
+        $Module.Result.command = $command
     }
 
     if ($result.stdout -match ' upgraded (\d+)/\d+ package') {
@@ -785,6 +786,7 @@ function Install-ChocolateyPackage {
 
     if ($Module.Verbosity -gt 1) {
         $Module.Result.stdout = $result.stdout
+        $Module.Result.command = $command
     }
 
     Set-TaskResultChanged
@@ -890,6 +892,7 @@ function Uninstall-ChocolateyPackage {
 
     if ($Module.Verbosity -gt 1) {
         $Module.Result.stdout = $result.stdout
+        $Module.Result.command = $command
     }
 
     Set-TaskResultChanged
